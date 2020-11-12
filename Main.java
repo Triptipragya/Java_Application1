@@ -28,7 +28,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("app_layout.fxml"));
         VBox rootNode = loader.load();
         MenuBar menuBar = CreateMenu();
-        rootNode.getChildren().add(0,menuBar);
+        rootNode.getChildren().add(0,menuBar);                                                          // Menu Bar fixed on the top
         Scene scene = new Scene(rootNode);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Temperature Converter Tool");
@@ -42,7 +42,7 @@ public class Main extends Application {
         MenuItem newMenuItem = new MenuItem("New");
         newMenuItem.setOnAction(event -> {
             System.out.println("New Menu Item Clicked");
-            // More code....
+            
         });
         SeparatorMenuItem separatorMenuItem = new SeparatorMenuItem();
         MenuItem quitMenuItem = new MenuItem("Quit");
