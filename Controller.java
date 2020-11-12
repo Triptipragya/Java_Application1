@@ -32,9 +32,9 @@ public class Controller implements Initializable {
         ChoiceBox.setValue(C_TO_F_TEXT);
 
         ChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->  {
-            if (newValue.equals(C_TO_F_TEXT)) { // If user has selected "Celsius to Fahrenheit"
+            if (newValue.equals(C_TO_F_TEXT)) {                                                              // If user has selected "Celsius to Fahrenheit"
                 isC_TO_F = true;
-            } else {                // Else user has selected "Fahrenheit to Celsius"
+            } else {                                                                                          // Else user has selected "Fahrenheit to Celsius"
                 isC_TO_F = false;
             }
 
@@ -46,11 +46,11 @@ public class Controller implements Initializable {
     }
 
     private void convert() {
-        String input = UserInputField.getText(); // 23.4   ==> "23.4"
+        String input = UserInputField.getText(); 
 
         float enteredTemperature = 0.0f;
         try {
-            enteredTemperature = Float.parseFloat(input);    // 23.4f
+            enteredTemperature = Float.parseFloat(input);    
         } catch (Exception exception) {
             warnUser();
             return;
